@@ -19,3 +19,9 @@
 	background-position: center;
 	background-repeat: no-repeat;
 }
+.textAlert{
+	background-color: rgb(132, 99, 117, 0.5);
+	padding: 1vw;
+	color: rgb(255, 255, 186);
+	border-radius: 1vw;
+}

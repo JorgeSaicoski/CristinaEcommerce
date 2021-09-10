@@ -133,7 +133,7 @@ for (let i of productList){
 
 document.getElementById(`addproduct1`).onclick = function(){
 	Swal.fire({
-	  title: 'Natural fermentation using naturally occurring lactobacilli and yeast.',
+	  title: '<p class="textAlert">Natural fermentation using naturally occurring lactobacilli and yeast.</textAlert>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/bread.jpg")',
@@ -144,7 +144,7 @@ document.getElementById(`addproduct1`).onclick = function(){
 	})}
 document.getElementById(`addproduct2`).onclick = function(){
 	Swal.fire({
-	  title: 'A veggie hamburguer.',
+	  title: '<p class="textAlert">A veggie hamburguer.</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/hamburguer.jpg")',
@@ -154,7 +154,7 @@ document.getElementById(`addproduct2`).onclick = function(){
 	})}
 document.getElementById(`addproduct3`).onclick = function(){
 	Swal.fire({
-	  title: 'Brownie with chocolate',
+	  title: '<p class="textAlert">Brownie with chocolate</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/brownie.jpg")',
@@ -164,7 +164,7 @@ document.getElementById(`addproduct3`).onclick = function(){
 	})}
 document.getElementById(`addproduct4`).onclick = function(){
 	Swal.fire({
-	  title: 'Cheese Cake ',
+	  title: '<p class="textAlert">Cheese Cake</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/cheeaseCake.jpg")',
@@ -174,7 +174,7 @@ document.getElementById(`addproduct4`).onclick = function(){
 	})}
 document.getElementById(`addproduct5`).onclick = function(){
 	Swal.fire({
-	  title: 'Custom width, padding, background.',
+	  title: '<p class="textAlert">Custom width, padding, background.</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/lemonPie.jpg")', 
@@ -184,7 +184,7 @@ document.getElementById(`addproduct5`).onclick = function(){
 	})}
 document.getElementById(`addproduct6`).onclick = function(){
 	Swal.fire({
-	  title: 'Custom width, padding, background.',
+	  title: '<p class="textAlert">Custom width, padding, background.</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/tart.jpg")',
