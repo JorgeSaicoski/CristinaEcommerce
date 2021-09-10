@@ -223,3 +223,14 @@ $('#openCart').click(()=>{
 
 })
 
+
+
+
+$.get(`https://catfact.ninja/fact?max_length=140`, (res) => {
+
+    	
+    $('#catFact').html(`
+    <p>${res.fact}</p>
+    `)
+    console.log(res.fact)
+    })
