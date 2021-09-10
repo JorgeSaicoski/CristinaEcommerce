@@ -1,4 +1,4 @@
-#open{
+/*#open{
 	width: 100%;
 	height: auto;
 	transition-duration: 0.5s;
@@ -11,4 +11,11 @@
 	transition-duration: 0.5s;
     transition-timing-function:ease-in;
     overflow: hidden;
+}
+*/
+
+#backgroundImage{
+	background-image: url("../images/template.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
 }

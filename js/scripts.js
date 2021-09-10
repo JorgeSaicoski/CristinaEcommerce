@@ -7,11 +7,12 @@
 // Use this file to add JavaScript to your project
 
 class Product{
-	constructor(name, price, personEat){
+	constructor(name, price, personEat, id){
 		this.name = name
 		this.price = parseFloat(price)
 		this.personEat = parseFloat(personEat)
 		this.cartAmount = 0
+		this.id = id
 	}
 	add(){
 		console.log(this.name)
@@ -111,12 +112,12 @@ class Product{
 	}
 }
 
-let product1 = new Product("product1", 18, 0.5)
-let product2 = new Product("product2", 25, 0.25)
-let product3 = new Product("product3", 40, 2)
-let product4 = new Product("product4", 25, 0.50)
-let product5 = new Product("product5", 18, 0.25)
-let product6 = new Product("product6", 40, 3)
+let product1 = new Product("Sourdough Bread", 300, 2, "1")
+let product2 = new Product("Veggie Hamburguer", 350, 1, "2")
+let product3 = new Product("Browine", 170, 0.5, "3")
+let product4 = new Product("Cheease Cake", 200, 1, "4")
+let product5 = new Product("Lemon Pie", 500, 8, "5")
+let product6 = new Product("Tart", 500, 3, "6")
 let productList = [product1, product2, product3, product4, product5, product6]
 let itensAmount = 0
 let total = 0
@@ -124,11 +125,75 @@ let canEat = 0
 
 for (let i of productList){
 	//Buttons functions
-	document.getElementById(`add${i.name}`).onclick = function(){i.add()}
-	document.getElementById(`cartAdd${i.name}`).onclick = function(){i.add()}
-	document.getElementById(`cartRemove${i.name}`).onclick = function(){i.remove()}
+	document.getElementById(`cartAdd${i.id}`).onclick = function(){i.add()}
+	document.getElementById(`cartRemove${i.id}`).onclick = function(){i.remove()}
 }
 
+
+
+document.getElementById(`addproduct1`).onclick = function(){
+	Swal.fire({
+	  title: 'Natural fermentation using naturally occurring lactobacilli and yeast.',
+	  width: 500,
+	  padding: '3em',
+	  background: '#fff url("./images/bread.jpg")',
+	  backdrop: `
+	    rgba(0,0,123,0.4)
+	  `
+	  
+	})}
+document.getElementById(`addproduct2`).onclick = function(){
+	Swal.fire({
+	  title: 'A veggie hamburguer.',
+	  width: 500,
+	  padding: '3em',
+	  background: '#fff url("./images/hamburguer.jpg")',
+	  backdrop: `
+	    rgba(0,0,123,0.4)
+	  `
+	})}
+document.getElementById(`addproduct3`).onclick = function(){
+	Swal.fire({
+	  title: 'Brownie with chocolate',
+	  width: 500,
+	  padding: '3em',
+	  background: '#fff url("./images/brownie.jpg")',
+	  backdrop: `
+	    rgba(0,0,123,0.4)
+	  `
+	})}
+document.getElementById(`addproduct4`).onclick = function(){
+	Swal.fire({
+	  title: 'Cheese Cake ',
+	  width: 500,
+	  padding: '3em',
+	  background: '#fff url("./images/cheeaseCake.jpg")',
+	  backdrop: `
+	    rgba(0,0,123,0.4)
+	  `
+	})}
+document.getElementById(`addproduct5`).onclick = function(){
+	Swal.fire({
+	  title: 'Custom width, padding, background.',
+	  width: 500,
+	  padding: '3em',
+	  background: '#fff url("./images/lemonPie.jpg")', 
+	  backdrop: `
+	    rgba(0,0,123,0.4)
+	  `
+	})}
+document.getElementById(`addproduct6`).onclick = function(){
+	Swal.fire({
+	  title: 'Custom width, padding, background.',
+	  width: 500,
+	  padding: '3em',
+	  background: '#fff url("./images/tart.jpg")',
+	  backdrop: `
+	    no-repeat
+	  `
+	})}
+
+/*
 document.getElementById(`openCart`).onclick = function(){openCart()}
 document.getElementById(`return`).onclick = function(){changeWindow()}
 
@@ -141,3 +206,20 @@ function changeWindow(){
 	document.getElementById("open").id="close"
 	document.getElementById("close").id="open"
 }
+*/
+
+$(document).ready(()=>{
+	$('#close').fadeOut(2000)
+})
+
+$('#return').click(()=>{
+    $('#open').fadeIn(2000)
+    $('#close').fadeOut(2000)
+
+})
+$('#openCart').click(()=>{
+    $('#open').fadeOut(2000)
+    $('#close').fadeIn(4000)
+
+})
+

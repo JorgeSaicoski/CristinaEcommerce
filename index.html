@@ -13,12 +13,15 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/css.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="sweetalert2.all.min.js"></script>
+
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <a class="navbar-brand" href="#!">Cris Web-Site</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -35,9 +38,9 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit" id="openCart">
+                        <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1" id = "card"></i>
-                            Cart
+                            Itens at calculator
                             <span class="badge bg-dark text-white ms-1 rounded-pill" id="itensAmount">0</span>
                         </button>
                     </form>
@@ -45,11 +48,10 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-dark py-5">
+        <header class="bg-dark py-5" id="backgroundImage">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Cris Shop</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+                    <h1 class="display-4 fw-bolder">Cris Shop Calculator</h1>
                 </div>
             </div>
         </header>
@@ -60,162 +62,133 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Salty</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="./images/bread.jpg"/>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
+                                    <h5 class="fw-bolder">Sourdough Bread</h5>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
+                                    300 UYU
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct1" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct1" href="#">Info</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Salty</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="./images/hamburguer.jpg"/>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <h5 class="fw-bolder">Veggie Hamburguer</h5>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                    350 UYU
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct2" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct2" href="#">Info</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="./images/brownie.jpg"  />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
+                                    <!-- Sale badge-->
+                                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Dessert</div>
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
+                                    <h5 class="fw-bolder">Brownie</h5>
                                     <!-- Product price-->
-                                    $40.00
+                                    170 UYU
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct3" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct3" href="#">Info</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Dessert</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="./images/cheeaseCake.jpg"/>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <h5 class="fw-bolder">Cheese Cake</h5>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                    200 UYU
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct4" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct4" href="#">Info</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Dessert</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="./images/lemonPie.jpg" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
+                                    <h5 class="fw-bolder">Lemon Pie</h5>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
+                                    500 UYU
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct5" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct5" href="#">Info</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Salty</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="./images/tart.jpg" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
+                                    <h5 class="fw-bolder">Tart</h5>
                                     <!-- Product price-->
-                                    $40.00
+                                    500 UYU
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct6" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="addproduct6" href="#">Info</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button" id="openCart">Calculator</button>
             </div>
         </section>
         <section id="close">
@@ -227,57 +200,57 @@
                         <th>How many people can eat it?</th>
                     </tr>
                     <tr>
-                        <th>Product 1</th>
-                        <th>18 UYU</th>
-                        <th>A person can eat 2 this</th>
-                        <th class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button" id="cartAddproduct1">+</button>
-                            <button class="btn btn-primary" type="button" id="cartRemoveproduct1">-</button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Product 2</th>
-                        <th>25 UYU</th>
-                        <th>A persone can eat 4 this</th>
-                        <th class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button" id="cartAddproduct2">+</button>
-                            <button class="btn btn-primary" type="button" id="cartRemoveproduct2">-</button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Product 3</th>
-                        <th>40</th>
+                        <th>Sourdough Bread</th>
+                        <th>300 UYU</th>
                         <th>2 people can eat it.</th>
                         <th class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button" id="cartAddproduct3">+</button>
-                            <button class="btn btn-primary" type="button" id="cartRemoveproduct3">-</button>
+                            <button class="btn btn-primary" type="button" id="cartAdd1">+</button>
+                            <button class="btn btn-primary" type="button" id="cartRemove1">-</button>
                         </th>
                     </tr>
                     <tr>
-                        <th>Product 4</th>
-                        <th>25 UYU</th>
-                        <th>A person can eat 2 this</th>
+                        <th>Veggie Hamburguer</th>
+                        <th>350 UYU</th>
+                        <th>A person can eat it</th>
                         <th class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button" id="cartAddproduct4">+</button>
-                            <button class="btn btn-primary" type="button" id="cartRemoveproduct4">-</button>
+                            <button class="btn btn-primary" type="button" id="cartAdd2">+</button>
+                            <button class="btn btn-primary" type="button" id="cartRemove2">-</button>
                         </th>
                     </tr>
                     <tr>
-                        <th>Product 5</th>
-                        <th>18 UYU</th>
-                        <th>A person can eat 4 this</th>
+                        <th>Browine</th>
+                        <th>170 UYU</th>
+                        <th>2 people can eat it.</th>
                         <th class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button" id="cartAddproduct5">+</button>
-                            <button class="btn btn-primary" type="button" id="cartRemoveproduct5">-</button>
+                            <button class="btn btn-primary" type="button" id="cartAdd3">+</button>
+                            <button class="btn btn-primary" type="button" id="cartRemove3">-</button>
                         </th>
                     </tr>
                     <tr>
-                        <th>Product 6</th>
-                        <th>40 UYU</th>
-                        <th>3 people can eat it</th>
+                        <th>Cheease Cake</th>
+                        <th>200 UYU</th>
+                        <th>A person can eat it.</th>
                         <th class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button" id="cartAddproduct6">+</button>
-                            <button class="btn btn-primary" type="button" id="cartRemoveproduct6">-</button>
+                            <button class="btn btn-primary" type="button" id="cartAdd4">+</button>
+                            <button class="btn btn-primary" type="button" id="cartRemove4">-</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Lemon Pie</th>
+                        <th>500 UYU</th>
+                        <th>8 people can eat it.</th>
+                        <th class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary" type="button" id="cartAdd5">+</button>
+                            <button class="btn btn-primary" type="button" id="cartRemove5">-</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Tart</th>
+                        <th>500 UYU</th>
+                        <th>3 people can eat it.</th>
+                        <th class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary" type="button" id="cartAdd6">+</button>
+                            <button class="btn btn-primary" type="button" id="cartRemove6">-</button>
                         </th>
                     </tr>
                 </tbody>
@@ -301,7 +274,6 @@
             </table>
             <div class="d-grid gap-2">
                 <button class="btn btn-primary" type="button" id="return">Return</button>
-                <button class="btn btn-primary" type="button">Pay</button>
             </div>
 
 
@@ -313,6 +285,8 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
+
         <script src="js/scripts.js"></script>
+
     </body>
 </html>
