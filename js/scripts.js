@@ -137,61 +137,147 @@ document.getElementById(`addproduct1`).onclick = function(){
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/bread.jpg")',
+	 showCancelButton: true,
+	  confirmButtonText:
+   		 'Go to cart',
 	  backdrop: `
 	    rgba(0,0,123,0.4)
 	  `
-	  
-	})}
+	}
+	).then((result) => {
+  if (result.isConfirmed) {
+    if(product1.cartAmount == 0){
+			product1.add()
+		}
+		$('#open').fadeOut(2000)
+   		$('#close').fadeIn(4000)
+
+  	}
+  })
+}
 document.getElementById(`addproduct2`).onclick = function(){
 	Swal.fire({
 	  title: '<p class="textAlert">A veggie hamburguer.</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/hamburguer.jpg")',
+	  showCancelButton: true,
+	  confirmButtonText:
+   		 'Go to cart',
 	  backdrop: `
 	    rgba(0,0,123,0.4)
 	  `
-	})}
-document.getElementById(`addproduct3`).onclick = function(){
+	}
+	).then((result) => {
+  if (result.isConfirmed) {
+    if(product2.cartAmount == 0){
+			product2.add()
+		}
+		$('#open').fadeOut(2000)
+   		$('#close').fadeIn(4000)
+
+  }
+})
+	
+	
+
+}
+	document.getElementById(`addproduct3`).onclick = function(){
 	Swal.fire({
 	  title: '<p class="textAlert">Brownie with chocolate</p>',
 	  width: 500,
 	  padding: '3em',
-	  background: '#fff url("./images/brownie.jpg")',
+	  showCancelButton: true,
+	  confirmButtonText:
+   		 'Go to cart',
 	  backdrop: `
 	    rgba(0,0,123,0.4)
 	  `
-	})}
+	}
+	).then((result) => {
+  if (result.isConfirmed) {
+    if(product3.cartAmount == 0){
+			product3.add()
+		}
+		$('#open').fadeOut(2000)
+   		$('#close').fadeIn(4000)
+
+  }
+})
+}
 document.getElementById(`addproduct4`).onclick = function(){
 	Swal.fire({
 	  title: '<p class="textAlert">Cheese Cake</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/cheeaseCake.jpg")',
+	  showCancelButton: true,
+	  confirmButtonText:
+   		 'Go to cart',
 	  backdrop: `
 	    rgba(0,0,123,0.4)
 	  `
-	})}
+	}
+	).then((result) => {
+  if (result.isConfirmed) {
+    if(product4.cartAmount == 0){
+			product4.add()
+		}
+		$('#open').fadeOut(2000)
+   		$('#close').fadeIn(4000)
+
+  }
+})
+}
 document.getElementById(`addproduct5`).onclick = function(){
 	Swal.fire({
 	  title: '<p class="textAlert">Custom width, padding, background.</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/lemonPie.jpg")', 
+	  showCancelButton: true,
+	  confirmButtonText:
+   		 'Go to cart',
 	  backdrop: `
 	    rgba(0,0,123,0.4)
 	  `
-	})}
+	}
+	).then((result) => {
+  if (result.isConfirmed) {
+    if(product5.cartAmount == 0){
+			product5.add()
+		}
+		$('#open').fadeOut(2000)
+   		$('#close').fadeIn(4000)
+
+  }
+})
+
+	 }
 document.getElementById(`addproduct6`).onclick = function(){
 	Swal.fire({
 	  title: '<p class="textAlert">Custom width, padding, background.</p>',
 	  width: 500,
 	  padding: '3em',
 	  background: '#fff url("./images/tart.jpg")',
+	  showCancelButton: true,
+	  confirmButtonText:
+   		 'Go to cart',
 	  backdrop: `
-	    no-repeat
+	    rgba(0,0,123,0.4)
 	  `
-	})}
+	}
+	).then((result) => {
+  if (result.isConfirmed) {
+    if(product6.cartAmount == 0){
+			product6.add()
+		}
+		$('#open').fadeOut(2000)
+   		$('#close').fadeIn(4000)
+
+  }
+})
+	  }
 
 /*
 document.getElementById(`openCart`).onclick = function(){openCart()}
@@ -207,6 +293,7 @@ function changeWindow(){
 	document.getElementById("close").id="open"
 }
 */
+
 
 $(document).ready(()=>{
 	$('#close').fadeOut(2000)
@@ -234,3 +321,10 @@ $.get(`https://catfact.ninja/fact?max_length=140`, (res) => {
     `)
     console.log(res.fact)
     })
+
+
+
+$('.pay').click(()=>{
+    console.log("teste")
+
+})

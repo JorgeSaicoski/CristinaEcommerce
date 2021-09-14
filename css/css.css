@@ -25,3 +25,10 @@
 	color: rgb(255, 255, 186);
 	border-radius: 1vw;
 }
+.sweetButton{
+	background-color: rgb(41, 239, 49);
+	padding: 1vw;
+	color: rgb(255, 255, 186);
+	border-radius: 1vw;
+	margin: 0;
+}
