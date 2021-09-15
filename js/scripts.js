@@ -325,6 +325,42 @@ $.get(`https://catfact.ninja/fact?max_length=140`, (res) => {
 
 
 $('.pay').click(()=>{
-    console.log("teste")
+    
+    buy()
 
 })
+
+
+
+
+
+const buy = async () => {
+		console.log("teste")
+    const mapML = productList.map( (prod) => {
+        return {
+            title: prod.name,
+            description: "",
+            picture_url: "",
+            category_id: prod.id,
+            quantity: prod.cartAmount,
+            currency_id: "UYU",
+            unit_price: prod.price
+        }
+    })
+
+    const resp = await fetch('https://api.mercadopago.com/checkout/preferences', {
+                    method: 'POST',
+                    headers: {
+                        Authorization: 'Bearer TEST-1638372299311024-091520-bf4a0931c571a606308cc7d579e77b3a-487577562'
+                    },
+                    body: JSON.stringify({
+                        items: mapML,
+                        
+                    })
+                })
+    
+    const data = await resp.json()
+
+    window.location.replace(data.init_point)
+
+}
