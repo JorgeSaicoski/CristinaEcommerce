@@ -188,6 +188,7 @@ document.getElementById(`addproduct2`).onclick = function(){
 	  width: 500,
 	  padding: '3em',
 	  showCancelButton: true,
+	  background: '#fff url("./images/brownie.jpg")',
 	  confirmButtonText:
    		 'Go to cart',
 	  backdrop: `
@@ -325,7 +326,7 @@ $.get(`https://catfact.ninja/fact?max_length=140`, (res) => {
 
 
 $('.pay').click(()=>{
-    
+    console.log("teste")
     buy()
 
 })
@@ -335,7 +336,8 @@ $('.pay').click(()=>{
 
 
 const buy = async () => {
-		console.log("teste")
+	console.log("teste2")
+
     const mapML = productList.map( (prod) => {
         return {
             title: prod.name,
@@ -343,7 +345,7 @@ const buy = async () => {
             picture_url: "",
             category_id: prod.id,
             quantity: prod.cartAmount,
-            currency_id: "UYU",
+            currency_id: "ARS",
             unit_price: prod.price
         }
     })
@@ -355,7 +357,10 @@ const buy = async () => {
                     },
                     body: JSON.stringify({
                         items: mapML,
-                        
+                        back_urls: {
+                            success: 'https://jorgesaicoski.github.io/CristinaEcommerce/#',
+                            failure: 'https://jorgesaicoski.github.io/CristinaEcommerce/#'
+                        }
                     })
                 })
     
@@ -364,3 +369,4 @@ const buy = async () => {
     window.location.replace(data.init_point)
 
 }
+
